@@ -66,6 +66,11 @@ export default function RecordList() {
      );
    });
  }
+
+ //sort list
+ function sortList() {
+    console.log("ahhh");
+ }
  
  // This following section will display the table with the records of individuals.
  return (
@@ -74,7 +79,9 @@ export default function RecordList() {
      <table className="table table-striped" style={{ marginTop: 20 }}>
        <thead>
          <tr>
-           <th>Service</th>
+           <th>
+             <button className="btn btn-link" onClick={() => sortList()}>Service</button>
+            </th>
            <th>Username</th>
            <th>Password</th>
            <th>Action</th>
