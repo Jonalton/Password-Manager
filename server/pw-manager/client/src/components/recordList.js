@@ -22,6 +22,7 @@ const Record = (props) => (
 export default function RecordList() {
  const [records, setRecords] = useState([]);
  
+ 
  // This method fetches the records from the database.
  useEffect(() => {
    async function getRecords() {
@@ -56,7 +57,7 @@ export default function RecordList() {
  function recordList() {
 
    return records.map((record) => {
-    console.log(record);
+    //console.log(record);
      return (
        <Record
          record={record}
@@ -69,10 +70,13 @@ export default function RecordList() {
 
  //sort list
  function sortList() {
-    console.log("ahhh");
+    records.forEach(item => console.log(item.service));
+    const sortedRecords = records.sort((a,b) => a.service > b.service ? 1 : -1);
+    console.log(sortedRecords);
+    setRecords(sortedRecords);
  }
  
- // This following section will display the table with the records of individuals.
+ // This following section will dissplay the table with the records of individuals.
  return (
    <div>
      <h3>Record List</h3>
