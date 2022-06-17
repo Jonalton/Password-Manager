@@ -77,7 +77,7 @@ export default function Create() {
        <div className="form-group">
          <input
            type="submit"
-           value="Create person"
+           value="Add password"
            className="btn btn-primary"
          />
        </div>
